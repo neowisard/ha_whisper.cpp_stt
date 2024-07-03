@@ -19,7 +19,7 @@ run
 ### Configuration:
 
 Remarks:
-- Add your own API key
+- Add your own server_url
 - language MUST be set AND has to be ISO-639-1 format
 - There will be an error in the home assistant logs, that configuring stt is not allowed in configuration.yaml - you can ignore this
 
@@ -29,7 +29,7 @@ configuration.yaml:
 ```
 stt:
   - platform: whisper_api_stt
-    serverurl: "http://192.168.0.55:5005/inference"
+    server_url: "http://192.168.0.55:5005/inference"
     model: "whisper-1"
     language: "en"
 ```
