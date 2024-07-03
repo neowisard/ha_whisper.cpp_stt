@@ -8,7 +8,9 @@ Integration works for Assist pipelines.
 1.Git pull whisper.cpp
 my config for Tesla P40 
 2.cmake -B build  -DGGML_CUDA_FORCE_MMQ=1 -DCMAKE_CUDA_ARCHITECTURES=61 -DGGML_CUDA=1 -DGGML_F16C=OFF -DGGML_AVX512=OFF -DGGML_AVX2=OFF -DGGML_FMA=OFF -DGGML_CCACHE=OFF
+
 3.cmake --build build --config Release
+
 run 
 ./build/bin/server -m /ai/models/whisper/ggml-large-v3-q5_0.bin --host 192.168.0.55 --port 5005 -l en -fa
 
