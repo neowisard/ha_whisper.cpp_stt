@@ -25,7 +25,7 @@ import io
 
 
 CONF_API_KEY = ''
-DEFAULT_LANG = 'ru-RU'
+DEFAULT_LANG = 'en-US'
 OPENAI_STT_URL = "server_url"
 CONF_MODEL = 'model'
 CONF_URL = 'url'
