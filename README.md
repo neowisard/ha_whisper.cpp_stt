@@ -3,7 +3,15 @@
 Integration works for Assist pipelines. 
 
 ### Requirements:
-- A working Whisper API Key (Try your key with curl or something else)
+- Installed Whisper.cpp server in network
+
+1.Git pull whisper.cpp
+2. Before compiling whisper.cpp need swap 'inference' endpoint to 'v1/audio/transcriptions' (just replace this string).
+my config for Tesla P40 
+3.cmake -B build  -DGGML_CUDA_FORCE_MMQ=1 -DCMAKE_CUDA_ARCHITECTURES=61 -DGGML_CUDA=1 -DGGML_F16C=OFF -DGGML_AVX512=OFF -DGGML_AVX2=OFF -DGGML_FMA=OFF -DGGML_CCACHE=OFF
+4.cmake --build build --config Release
+run 
+./build/bin/server -m /ai/models/whisper/ggml-large-v3-q5_0.bin --host 192.168.0.55 --port 5005 -l en -fa
 
 ### Configuration:
 
@@ -18,7 +26,7 @@ configuration.yaml:
 ```
 stt:
   - platform: whisper_api_stt
-    api_key: ""
+    serverurl: "http://192.168.0.55:5005"
     model: "whisper-1"
     language: "en"
 ```
