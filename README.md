@@ -6,6 +6,7 @@ Integration works for Assist pipelines.
 - Installed Whisper.cpp server in network
 
 1.Git pull whisper.cpp
+
 my config for Tesla P40 
 2.cmake -B build  -DGGML_CUDA_FORCE_MMQ=1 -DCMAKE_CUDA_ARCHITECTURES=61 -DGGML_CUDA=1 -DGGML_F16C=OFF -DGGML_AVX512=OFF -DGGML_AVX2=OFF -DGGML_FMA=OFF -DGGML_CCACHE=OFF
 
