@@ -33,7 +33,7 @@ stt:
     server_url: "http://192.168.0.176:9000/v1/audio/transcribe"
     model: "whisper-1"
     language: "ru"
-    temperature: "0.5"
+
 ```
 
 ### Used sources + thanks to:
