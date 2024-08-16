@@ -24,11 +24,10 @@ import wave
 import io
 
 
-CONF_API_KEY = ''
+CONF_API_KEY = 'api_key'
 DEFAULT_LANG = 'en-US'
-OPENAI_STT_URL = "server_url"
 CONF_MODEL = 'model'
-CONF_URL = 'url'
+CONF_URL = 'server_url'
 CONF_PROMPT = 'prompt'
 CONF_TEMPERATURE = 'temperature'
 
@@ -47,7 +46,7 @@ async def async_get_engine(hass, config, discovery_info=None):
     api_key = config[CONF_API_KEY]
     language = config.get(CONF_LANG, DEFAULT_LANG)
     model = config.get(CONF_MODEL)
-    url = config.get('url')
+    url = config.get('server_url')
     prompt = config.get('prompt')
     temperature = config.get('temperature')
     return OpenAISTTProvider(hass, api_key, language, model, url, prompt, temperature)
