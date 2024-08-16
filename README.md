@@ -30,9 +30,10 @@ configuration.yaml:
 stt:
   - platform: whisper_api_stt
     api_key: "a132b20c-96be-467f-a15a-ed08aed67345"
-    server_url: "http://192.168.0.176:9000/v1/audio/transcribe"
+    server_url: "http://192.168.0.176:9000/v1/audio/transcriptions"
     model: "whisper-1"
     language: "ru"
+    temperature: "0.5"
 
 ```
 
