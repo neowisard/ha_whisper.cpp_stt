@@ -29,9 +29,11 @@ configuration.yaml:
 ```
 stt:
   - platform: whisper_api_stt
-    server_url: "http://192.168.0.55:5005/inference"
+    api_key: "a132b20c-96be-467f-a15a-ed08aed67345"
+    server_url: "http://192.168.0.176:9000/v1/audio/transcribe"
     model: "whisper-1"
-    language: "en"
+    language: "ru"
+    temperature: "0.5"
 ```
 
 ### Used sources + thanks to:
